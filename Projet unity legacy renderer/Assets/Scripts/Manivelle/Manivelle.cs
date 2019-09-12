@@ -10,6 +10,7 @@ public class Manivelle : MonoBehaviour
     public CircularDrive circular;
     public float multiplier;
     public GameObject debugWin;
+    public GameObject roomLight;
     
     // Start is called before the first frame update
     void Start()
@@ -26,10 +27,12 @@ public class Manivelle : MonoBehaviour
         if (panneauSolaireGo.transform.eulerAngles.z >= 42.5f && panneauSolaireGo.transform.eulerAngles.z <= 47.5f)
         {
             debugWin.SetActive(true);
+            roomLight.SetActive(true);
         }
         else
         {
             debugWin.SetActive(false);
+            roomLight.SetActive(false);
         }
     }
 }
