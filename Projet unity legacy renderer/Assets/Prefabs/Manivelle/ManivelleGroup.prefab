@@ -298,7 +298,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   panneauSolaireGo: {fileID: 0}
   startAngle: {x: 0, y: 0, z: 0, w: 0}
-  circular: {fileID: 0}
+  circular: {fileID: 4568664634547836905}
   multiplier: 0.1
   debugWin: {fileID: 0}
   roomLight: {fileID: 0}
@@ -383,7 +383,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  maxAngle: 480
+  maxAngle: 550
   freezeOnMax: 0
   onMaxAngle:
     m_PersistentCalls:
