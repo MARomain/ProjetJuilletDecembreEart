@@ -1,5 +1,7 @@
 {
-   "app_key" : "application.generated.unity.steamvr.exe",
+   "action_manifest_version" : 0,
+   "alias_info" : {},
+   "app_key" : "application.generated.unity.escapevrlegacyrenderer.exe",
    "bindings" : {
       "/actions/buggy" : {
          "sources" : [
@@ -268,7 +270,10 @@
          ]
       }
    },
+   "category" : "steamvr_input",
    "controller_type" : "oculus_touch",
    "description" : "",
-   "name" : "oculus_touch"
+   "name" : "Ma configuration de Escape VR legacy renderer [Testing] pour Oculus Touch",
+   "options" : {},
+   "simulated_actions" : []
 }

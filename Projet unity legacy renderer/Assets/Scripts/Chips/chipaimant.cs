@@ -10,12 +10,12 @@ public class chipaimant : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if(other.GetComponent<objectgrab>() != null)
+        if(other.GetComponent<objectgrab>() != null) //si l'objet en collision est un
         {
             objectgrab chip = other.GetComponent<objectgrab>();
             rb = other.GetComponent<Rigidbody>();
 
-            if ((chip.inHand == false) && (chip.isMagnetic == true) && (occuped == false))
+            if ((chip.inHand == false) && (occuped == false))
             {
                 other.transform.position = aimantpoint.transform.position;
                 other.transform.rotation = aimantpoint.transform.rotation;
@@ -33,10 +33,7 @@ public class chipaimant : MonoBehaviour
             if (atractdone.transform.position != aimantpoint.transform.position)
             {
                 occuped = false;
-                if(rb != null)
-                {
-                    rb.isKinematic = false;
-                }
+                rb.isKinematic = false;
             }
         }
         

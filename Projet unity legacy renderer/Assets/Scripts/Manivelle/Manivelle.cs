@@ -24,7 +24,7 @@ public class Manivelle : MonoBehaviour
     {
         panneauSolaireGo.transform.localRotation = Quaternion.AngleAxis(circular.outAngle * multiplier, Vector3.forward);
 
-        if (panneauSolaireGo.transform.eulerAngles.z >= 42.5f && panneauSolaireGo.transform.eulerAngles.z <= 47.5f)
+        if (panneauSolaireGo.transform.eulerAngles.z >= 38f && panneauSolaireGo.transform.eulerAngles.z <= 52f)
         {
             debugWin.SetActive(true);
             roomLight.SetActive(true);

@@ -24,6 +24,7 @@ public class Chipcheck : MonoBehaviour
         else
         {
             correct = false;
+            validatecube.SetActive(false);
         }
     }
 }

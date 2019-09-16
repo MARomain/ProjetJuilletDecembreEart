@@ -6,7 +6,6 @@ using Valve.VR.InteractionSystem;
 public class objectgrab : Interactable
 {
     public bool inHand=false;
-    public bool isMagnetic=false;
     
     // Start is called before the first frame update
     void Start()
