@@ -1,21 +1,23 @@
 ﻿using UnityEngine;
+using Valve.VR.InteractionSystem;
 
-
-public class chipaimant : MonoBehaviour
+public class chipaimant : Interactable
 {
     public GameObject aimantpoint;
     public bool occuped =false;
     private GameObject atractdone;
     Rigidbody rb;
+    Interactable inter;
 
     private void OnTriggerStay(Collider other)
     {
         if(other.GetComponent<objectgrab>() != null) //si l'objet en collision est un
         {
             objectgrab chip = other.GetComponent<objectgrab>();
+            inter = other.GetComponent<Interactable>();
             rb = other.GetComponent<Rigidbody>();
 
-            if ((chip.inHand == false) && (occuped == false))
+            if (occuped == false)
             {
                 other.transform.position = aimantpoint.transform.position;
                 other.transform.rotation = aimantpoint.transform.rotation;
@@ -23,6 +25,17 @@ public class chipaimant : MonoBehaviour
                 occuped = true;
                 atractdone = other.gameObject;
             }
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.GetComponent<objectgrab>() != null) //si l'objet en collision est un
+        {
+            inter = other.GetComponent<Interactable>();
+
+            inter.attachedToHand.DetachObject(other.gameObject);
+            Debug.Log("collision aimant, detach from hand");
         }
     }
 
