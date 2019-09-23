@@ -201,7 +201,7 @@ GameObject:
   - component: {fileID: 4568664634547836905}
   - component: {fileID: 659022109407732980}
   m_Layer: 0
-  m_Name: Cylinder
+  m_Name: Manivelle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -297,11 +297,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   panneauSolaireGo: {fileID: 0}
-  startAngle: {x: 0, y: 0, z: 0, w: 0}
   circular: {fileID: 4568664634547836905}
-  multiplier: 0.1
-  debugWin: {fileID: 0}
+  rotationMultiplier: 0.1
   roomLight: {fileID: 0}
+  minOrientation: 40
+  maxOrientation: 50
 --- !u!114 &4568664634547836906
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -420,7 +420,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4568664634687001296}
   m_Layer: 0
-  m_Name: Manivelle
+  m_Name: ManivelleParent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

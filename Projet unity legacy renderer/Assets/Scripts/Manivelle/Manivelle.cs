@@ -6,32 +6,29 @@ using Valve.VR.InteractionSystem;
 public class Manivelle : MonoBehaviour
 {
     public GameObject panneauSolaireGo;
-    public Quaternion startAngle;
     public CircularDrive circular;
-    public float multiplier;
-    public GameObject debugWin;
+    public float rotationMultiplier;
     public GameObject roomLight;
+    public float minOrientation = 100f;
+    public float maxOrientation = 130f;
     
     // Start is called before the first frame update
     void Start()
     {
         circular = GetComponent<CircularDrive>();
-
     }
 
     // Update is called once per frame
     void Update()
     {
-        panneauSolaireGo.transform.localRotation = Quaternion.AngleAxis(circular.outAngle * multiplier, Vector3.forward);
+        panneauSolaireGo.transform.localRotation = Quaternion.AngleAxis(circular.outAngle * rotationMultiplier, Vector3.forward);
 
-        if (panneauSolaireGo.transform.eulerAngles.z >= 100f && panneauSolaireGo.transform.eulerAngles.z <= 130f)
+        if (panneauSolaireGo.transform.eulerAngles.z >= minOrientation && panneauSolaireGo.transform.eulerAngles.z <= maxOrientation)
         {
-            debugWin.SetActive(true);
             roomLight.SetActive(true);
         }
         else
         {
-            debugWin.SetActive(false);
             roomLight.SetActive(false);
         }
     }
