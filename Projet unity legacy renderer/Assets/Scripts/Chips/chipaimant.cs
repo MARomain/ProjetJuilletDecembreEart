@@ -17,8 +17,9 @@ public class chipaimant : Interactable
             inter = other.GetComponent<Interactable>();
             rb = other.GetComponent<Rigidbody>();
 
-            if (occuped == false)
+            if (occuped == false && chip.inHand == false)
             {
+                //inter.attachedToHand.DetachObject(other.gameObject);
                 other.transform.position = aimantpoint.transform.position;
                 other.transform.rotation = aimantpoint.transform.rotation;
                 rb.isKinematic = true;
@@ -28,20 +29,26 @@ public class chipaimant : Interactable
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+    public void GrabInSlot()
     {
-        if (other.GetComponent<objectgrab>() != null) //si l'objet en collision est un
-        {
-            inter = other.GetComponent<Interactable>();
-
-            inter.attachedToHand.DetachObject(other.gameObject);
-            Debug.Log("collision aimant, detach from hand");
-        }
+        rb.isKinematic = false;
+        occuped = false;
     }
+
+    //private void OnTriggerEnter(Collider other)
+    //{
+    //    if (other.GetComponent<objectgrab>() != null) //si l'objet en collision est un
+    //    {
+    //        inter = other.GetComponent<Interactable>();
+
+    //        inter.attachedToHand.DetachObject(other.gameObject);
+    //        Debug.Log("collision aimant, detach from hand");
+    //    }
+    //}
 
     private void Update()
     {
-        if(atractdone != null)
+        if (atractdone != null)
         {
             if (atractdone.transform.position != aimantpoint.transform.position)
             {
@@ -49,7 +56,7 @@ public class chipaimant : Interactable
                 rb.isKinematic = false;
             }
         }
-        
+
     }
 
 }
