@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class chipslot : MonoBehaviour
 {
-public enum chipnum { A,B,C,D,None}//quel est la bonne chip a mettre
+    public enum chipnum { A,B,C,D,None}//quel est la bonne chip a mettre
     public chipnum chip;
     public bool check = false; //retourne true si la bonne chip est dedans
 
