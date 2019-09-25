@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class chipslot : MonoBehaviour
 {
-public enum chipnum { A,B,C,D}//quel est la bonne chip a mettre
+public enum chipnum { A,B,C,D,None}//quel est la bonne chip a mettre
     public chipnum chip;
     public bool check = false; //retourne true si la bonne chip est dedans
 
@@ -69,6 +69,7 @@ public enum chipnum { A,B,C,D}//quel est la bonne chip a mettre
 
             if (occuped == false && chip.inHand == false) //si le slot n'est pas déjà occupé et que le chipn n'est pas tenu en main
             {
+                occuped = true;
                 other.transform.position = aimantpoint.transform.position; //snap position
                 other.transform.rotation = aimantpoint.transform.rotation; //snap rotation
                 chipRb.isKinematic = true; //rend kinemetic (n'a plus besoin de recevoir la physique tant qu'il est attaché)
