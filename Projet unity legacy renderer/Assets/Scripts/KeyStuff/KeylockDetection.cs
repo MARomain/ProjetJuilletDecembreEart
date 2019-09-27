@@ -15,12 +15,14 @@ public class KeylockDetection : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log("HIT! :" + other.gameObject);
+        Debug.Log(other.gameObject.tag);
         if(other.gameObject.tag == "Key")
         {
-            Debug.Log("collide");
-            rb = other.GetComponent<Rigidbody>();
+            Debug.Log("You collided with a Key");
+            rb = other.GetComponentInParent<Rigidbody>();
             other.gameObject.transform.position = snapPoint.position;
-            other.gameObject.transform.rotation = Quaternion.Euler(other.gameObject.transform.rotation.x, snapPoint.rotation.y, snapPoint.rotation.z);
+            other.gameObject.transform.localRotation = Quaternion.Euler(other.gameObject.transform.eulerAngles.x, 0f, 90f);
             rb.useGravity = false;
             rb.constraints = RigidbodyConstraints.FreezePosition | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
         }
