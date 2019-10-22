@@ -238,6 +238,24 @@
                },
                "mode" : "trigger",
                "path" : "/user/hand/right/input/grip"
+            },
+            {
+               "inputs" : {
+                  "click" : {
+                     "output" : "/actions/default/in/spawncubesx"
+                  }
+               },
+               "mode" : "button",
+               "path" : "/user/hand/left/input/x"
+            },
+            {
+               "inputs" : {
+                  "click" : {
+                     "output" : "/actions/default/in/spawncubesx"
+                  }
+               },
+               "mode" : "button",
+               "path" : "/user/hand/right/input/x"
             }
          ]
       },
@@ -272,7 +290,7 @@
    },
    "category" : "steamvr_input",
    "controller_type" : "oculus_touch",
-   "description" : "",
+   "description" : "Test button X",
    "name" : "Ma configuration de Escape VR legacy renderer [Testing] pour Oculus Touch",
    "options" : {},
    "simulated_actions" : []
