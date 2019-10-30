@@ -41,7 +41,7 @@ public class Manivelle : MonoBehaviour
             light_animator.SetBool("light_phase2", false);
         }
         //quand l'angle du panneau commence a se rapprocher mais que les lumieres flickers
-        else if (panneauSolaireGo.transform.eulerAngles.z >= (minOrientation - animation_marge2 && panneauSolaireGo.transform.eulerAngles.z <= minOrientation - animation_marge || panneauSolaireGo.transform.eulerAngles.z >= (maxOrientation + animation_marge && panneauSolaireGo.transform.eulerAngles.z <= maxOrientation + animation_marge2)
+        else if (panneauSolaireGo.transform.eulerAngles.z >= minOrientation - animation_marge2 && panneauSolaireGo.transform.eulerAngles.z <= minOrientation - animation_marge || panneauSolaireGo.transform.eulerAngles.z >= maxOrientation + animation_marge && panneauSolaireGo.transform.eulerAngles.z <= maxOrientation + animation_marge2)
         {
             roomLight.SetActive(true);
             light_animator.SetBool("light_phase1", true);
