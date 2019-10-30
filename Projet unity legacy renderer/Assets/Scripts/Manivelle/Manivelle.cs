@@ -21,6 +21,7 @@ public class Manivelle : MonoBehaviour
         circular = GetComponent<CircularDrive>();
         light_animator.SetBool("light_phase1", false);
         light_animator.SetBool("light_phase2", false);
+        roomLight.SetActive(false);
     }
 
     // Update is called once per frame
@@ -32,11 +33,12 @@ public class Manivelle : MonoBehaviour
         {
             roomLight.SetActive(true);
             light_animator.SetBool("light_phase1", true);
-            light_animator.SetBool("light_phase2", true);
+            light_animator.SetBool("light_phase2", false);
         }
         // quand l'angle du panneau est pafaitement ajuster, cela stop les anim et laisse le groupe des lumiere activer
         else if (panneauSolaireGo.transform.eulerAngles.z >= minOrientation && panneauSolaireGo.transform.eulerAngles.z <= maxOrientation)
         {
+            roomLight.SetActive(true);
             light_animator.SetBool("light_phase1", false);
             light_animator.SetBool("light_phase2", false);
         }
@@ -44,8 +46,8 @@ public class Manivelle : MonoBehaviour
         else if (panneauSolaireGo.transform.eulerAngles.z >= minOrientation - animation_marge2 && panneauSolaireGo.transform.eulerAngles.z <= minOrientation - animation_marge || panneauSolaireGo.transform.eulerAngles.z >= maxOrientation + animation_marge && panneauSolaireGo.transform.eulerAngles.z <= maxOrientation + animation_marge2)
         {
             roomLight.SetActive(true);
-            light_animator.SetBool("light_phase1", true);
-            light_animator.SetBool("light_phase2", false);
+            light_animator.SetBool("light_phase1", false);
+            light_animator.SetBool("light_phase2", true);
         }
         //quand l'angle du panneau n'est pas assez proche pour activer quoi que ce soit
         else
