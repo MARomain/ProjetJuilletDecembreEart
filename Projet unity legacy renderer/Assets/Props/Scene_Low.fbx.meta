@@ -1,0 +1,188 @@
+fileFormatVersion: 2
+guid: 87ca76c2f9e72624799d37feeab36d84
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: BottomLeft_Shelf_Low
+    100002: Ceiling_Low
+    100004: Command_Table_Low
+    100006: Ground_Joint_Low
+    100008: Ground_Low
+    100010: Ground_Pedestal_Low
+    100012: Ground_Window_Low
+    100014: Interior_Walls_Low
+    100016: Mechanisms_Low
+    100018: NavSphere_Low
+    100020: NavSphere_Mount_Low
+    100022: Outside_Wall_Low
+    100024: //RootNode
+    100026: Top_Window_Low
+    100028: TopLeft_Shelf_Low
+    100030: TopRight_Shelf_Low
+    100032: Window_Low
+    400000: BottomLeft_Shelf_Low
+    400002: Ceiling_Low
+    400004: Command_Table_Low
+    400006: Ground_Joint_Low
+    400008: Ground_Low
+    400010: Ground_Pedestal_Low
+    400012: Ground_Window_Low
+    400014: Interior_Walls_Low
+    400016: Mechanisms_Low
+    400018: NavSphere_Low
+    400020: NavSphere_Mount_Low
+    400022: Outside_Wall_Low
+    400024: //RootNode
+    400026: Top_Window_Low
+    400028: TopLeft_Shelf_Low
+    400030: TopRight_Shelf_Low
+    400032: Window_Low
+    2100000: lambert3
+    2100002: lambert4
+    2100004: lambert14
+    2100006: lambert1
+    2100008: lambert5
+    2100010: lambert9
+    2100012: lambert12
+    2100014: lambert13
+    2100016: lambert19
+    2100018: emis_mtl1
+    2100020: lambert21
+    2100022: phong1
+    2100024: lambert22
+    2100026: Pod_2B__FIN_phong1
+    2300000: BottomLeft_Shelf_Low
+    2300002: Ceiling_Low
+    2300004: Command_Table_Low
+    2300006: Ground_Joint_Low
+    2300008: Ground_Low
+    2300010: Ground_Pedestal_Low
+    2300012: Ground_Window_Low
+    2300014: Interior_Walls_Low
+    2300016: Mechanisms_Low
+    2300018: NavSphere_Low
+    2300020: NavSphere_Mount_Low
+    2300022: Outside_Wall_Low
+    2300024: Top_Window_Low
+    2300026: TopLeft_Shelf_Low
+    2300028: TopRight_Shelf_Low
+    2300030: Window_Low
+    3300000: BottomLeft_Shelf_Low
+    3300002: Ceiling_Low
+    3300004: Command_Table_Low
+    3300006: Ground_Joint_Low
+    3300008: Ground_Low
+    3300010: Ground_Pedestal_Low
+    3300012: Ground_Window_Low
+    3300014: Interior_Walls_Low
+    3300016: Mechanisms_Low
+    3300018: NavSphere_Low
+    3300020: NavSphere_Mount_Low
+    3300022: Outside_Wall_Low
+    3300024: Top_Window_Low
+    3300026: TopLeft_Shelf_Low
+    3300028: TopRight_Shelf_Low
+    3300030: Window_Low
+    4300000: TopRight_Shelf_Low
+    4300002: BottomLeft_Shelf_Low
+    4300004: Top_Window_Low
+    4300006: Ceiling_Low
+    4300008: Ground_Joint_Low
+    4300010: Ground_Low
+    4300012: Ground_Pedestal_Low
+    4300014: Ground_Window_Low
+    4300016: Outside_Wall_Low
+    4300018: Window_Low
+    4300020: NavSphere_Mount_Low
+    4300022: NavSphere_Low
+    4300024: Mechanisms_Low
+    4300026: Command_Table_Low
+    4300028: TopLeft_Shelf_Low
+    4300030: Interior_Walls_Low
+    2186277476908879412: ImportLogs
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
