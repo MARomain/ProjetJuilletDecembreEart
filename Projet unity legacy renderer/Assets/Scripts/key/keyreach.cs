@@ -19,9 +19,11 @@ public class keyreach : MonoBehaviour
         {
             if (key.activekey)
             {
+               
                 // en dessous = si la celf est dedans et que le bouton est appuyé
                 active = true;
                 keygeneral.Inputneedtobecheck(); //trigger le traitement de la solution
+                key.activekey = false; 
 
             }
             //en dessous= si la clef est dedans mais ne fait rien
@@ -37,7 +39,7 @@ public class keyreach : MonoBehaviour
             {
                 thelight.SetActive(false);//retire la lumiere quand la clef n'est plus la
             }
-           
+
          
         }
     }

@@ -12,6 +12,7 @@ public class Keygeneral : MonoBehaviour
     public keyreach keyreach6;
     public keyreach keyreach7;
     public keyreach keyreach8; //chaque zone de détection de la clef
+    private bool needstepup = false;
 
     public bool finished = false; // Pour la progression general du jeu
 
@@ -26,76 +27,25 @@ public class Keygeneral : MonoBehaviour
     public Color good; //dans ma tete c'est vert
     public Color bad; // dans ma tete c'est rouge
     private bool red = false; //check si la lumiere "bad" est allumé
- 
-    // 1 6 5 7 3
 
+    // 1 6 5 7 3
+    // (keyreach6.active == true) change keyreach6 par keyreach5 pour passer le chiffre cherche a 5
     // Update is called once per frame
     public void Inputneedtobecheck() //input de la zone de détexion
     {
+        Debug.Log("inputneedtobecheck");
     switch (step)
         {
-            case 1:
-                if (keyreach1.active == true)
-                {
-                    Debug.Log("good result,step " + step + " complete" +" 16573");//qu'est ce que tu veux,c'est un debug mec
-                    Resetallkeyreach();
-                    step++;
-                    animator.SetInteger("step", step);
-                }
-                else
-                {
-                
-                    Resetallkeyreach();
-                    Failed();
-                }
-                break;
-            case 2:
-                if (keyreach6.active == true)
-                {
-                    Debug.Log("good result,step " + step + " complete" + " 16573");
-                    Resetallkeyreach();
-                    step++;
-                    animator.SetInteger("step", step);
-                }
-                else
-                {
-                    Resetallkeyreach();
-                    Failed();
-                }
-                break;
-            case 3:
-                if (keyreach5.active == true)
-                {
-                    Debug.Log("good result,step " + step + " complete" + " 16573");
-                    Resetallkeyreach();
-                    step++;
-                    animator.SetInteger("step", step);
-                }
-                else
-                {
-                    Resetallkeyreach();
-                    Failed();
-                }
-                break;
-            case 4:
-                if (keyreach7.active == true)
-                {
-                    Debug.Log("good result,step " + step + " complete" + " 16573");
-                    Resetallkeyreach();
-                    step++;
-                    animator.SetInteger("step", step);
-                }
-                else
-                {
-                    Resetallkeyreach();
-                    Failed();
-                }
-                break;
+           
+           
+           
+         
             case 5:
                 if (keyreach3.active == true)
                 {
                     Debug.Log("good result,step " + step + " complete" + " 16573");
-                    step++;
+                    // step++;
+                    needstepup = true;
                     animator.SetInteger("step", step);
                     Resetallkeyreach();
                     keyreach1.thelight.SetActive(true);
@@ -111,11 +61,83 @@ public class Keygeneral : MonoBehaviour
                 }
                 else
                 {
+                    Debug.Log("wrong_" + step);
                     Resetallkeyreach();
                     Failed();
                 }
                 break;
-       
+            case 4:
+                if (keyreach7.active == true)
+                {
+                    Debug.Log("good result,step " + step + " complete" + " 16573");
+                    Resetallkeyreach();
+                    //  step++;
+                    needstepup = true;
+                    animator.SetInteger("step", step);
+                }
+                else
+                {
+                    Debug.Log("wrong_" + step);
+                    Resetallkeyreach();
+                    Failed();
+                }
+                break;
+            case 3:
+                if (keyreach5.active == true)
+                {
+                    Debug.Log("good result,step " + step + " complete" + " 16573");
+                    Resetallkeyreach();
+                    //  step++;
+                    needstepup = true;
+                    animator.SetInteger("step", step);
+                }
+                else
+                {
+                    Debug.Log("wrong_" + step);
+                    Resetallkeyreach();
+                    Failed();
+                }
+                break;
+            case 2:
+                if (keyreach6.active == true)
+                {
+                    Debug.Log("good result,step " + step + " complete" + " 16573");
+                    Resetallkeyreach();
+                    // step++;
+                    needstepup = true;
+                    animator.SetInteger("step", step);
+                }
+                else
+                {
+                    Debug.Log("wrong_" + step);
+                    Resetallkeyreach();
+                    Failed();
+                }
+                break;
+            case 1:
+                if (keyreach1.active == true)
+                {
+                    Debug.Log("good result,step " + step + " complete" + " 16573");//qu'est ce que tu veux,c'est un debug mec
+                    Resetallkeyreach();
+                    // step++;
+                    needstepup = true;
+                    animator.SetInteger("step", step);
+                }
+                else
+                {
+                    Debug.Log("wrong_" + step);
+                    Resetallkeyreach();
+                    Failed();
+                }
+                break;
+
+               
+        }
+        if (needstepup == true)
+        {
+            Debug.Log("stepup");
+         step++;
+            needstepup = false;
 
         }
     }

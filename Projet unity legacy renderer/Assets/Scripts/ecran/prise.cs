@@ -6,6 +6,7 @@ public class prise : MonoBehaviour
 {
     public objectgrab objectgrab;
     public GameObject aimantpoint;
+    private Rigidbody rbecran;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,9 +18,17 @@ public class prise : MonoBehaviour
         {
             if (objectgrab.inHand == false)
             {
-                other.gameObject.transform.position = aimantpoint.transform.position;
+                rbecran = other.gameObject.GetComponent<Rigidbody>();
+
+                other.transform.position = aimantpoint.transform.position; //snap position
+                other.transform.rotation = aimantpoint.transform.rotation; //snap rotation
+                rbecran.isKinematic = true; //rend kinemetic (n'a plus besoin de recevoir la physique tant qu'il est attaché)
             }
         }
     }
-  
+    private void OnTriggerExit(Collider other)
+    {
+        rbecran.isKinematic = false;
+    }
+
 }

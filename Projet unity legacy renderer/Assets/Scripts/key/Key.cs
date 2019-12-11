@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Key : MonoBehaviour
 {
-    public bool keyinhand; //evite de pouvoir l'activer quand on ne l'a pas dans la main,passe en true quand la clef est ramassé.
-    public bool activekey;//bool activé quand le bouton de la clef est appuyé,sert pour les autres script.
-
+    
+    public bool activekey;//bool activé quand le bouton de la clef est appuyé,sert pour les autres script
+   
     // Start is called before the first frame update
     void Start()
     {
@@ -16,17 +16,25 @@ public class Key : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (keyinhand)
+        if (Input.GetKeyUp(KeyCode.E))
         {
-            if (Input.GetKeyUp(KeyCode.E))
-            {
-                activekey = true;
-    
-            }else
-            {
-                activekey = false;
-            }
+            activekey = true;
+
+            Debug.Log("inputed");
         }
-       
+        else
+        {
+            activekey = false;
+        }
+    }
+    public void Buttonactivekey()
+    {
+        activekey = true;
+        Debug.Log("inputed via vr" + activekey);
+    }
+    public void ButtonUNactivekey()
+    {
+        activekey = false;
+         Debug.Log("outputed via vr" + activekey);
     }
 }

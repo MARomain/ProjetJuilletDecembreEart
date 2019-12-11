@@ -5,7 +5,7 @@
       "app_key": "application.generated.unity.escapevrlegacyrenderer.exe",
       "launch_type": "url",
       "url": "steam://launch/",
-      "action_manifest_path": "C:\\Users\\Eart\\Desktop\\RepoProjetJuillet\\trunk\\Projet unity legacy renderer\\actions.json",
+      "action_manifest_path": "C:\\Users\\Eart\\Documents\\ProjetJuilletDecembreEart\\trunk\\Projet unity legacy renderer\\actions.json",
       "strings": {
         "en_us": {
           "name": "Escape VR legacy renderer [Testing]"

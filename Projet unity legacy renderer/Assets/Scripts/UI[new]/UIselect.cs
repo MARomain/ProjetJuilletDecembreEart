@@ -9,7 +9,8 @@ public class UIselect : MonoBehaviour
     public GameObject Navigationpanel;
     public GameObject Severpanel;
     public GameObject Diagnosticpanel;
-
+    public GameObject Lightruc;
+    public bool Onlight = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -52,4 +53,20 @@ public class UIselect : MonoBehaviour
         Hideall();
         Diagnosticpanel.SetActive(true);
     }
+
+    public void LightOn()
+    {
+        if (Onlight==false)
+        {
+            Lightruc.SetActive(true);
+            Onlight = true;
+        }
+        else
+        {
+            Lightruc.SetActive(false);
+          
+            Onlight = false;
+        }
+    }
+ 
 }
